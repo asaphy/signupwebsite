@@ -8,6 +8,12 @@ html {
   color: white;
 }
 
+body{
+   min-width:320px; /* suppose you want minimun width of 1000px */
+   width: auto !important;  /* Firefox will set width as auto */
+   width:360px;             /* As IE ignores !important it will set width as 1000px; */
+}
+
 .title {
   color: white;
   margin: 30px 0 0 30px;
@@ -28,11 +34,12 @@ html {
   position: absolute;
   top: 20px;
   right: 30px;
+  text-decoration: none;
 }
 
 .row{
-  margin: 15%;
-  padding-bottom: 100px;
+  margin: 10%;
+  padding-bottom: 150px;
 }
 
 .col{
@@ -56,17 +63,19 @@ html {
 .email{
   clear: both;
   margin: auto;
-  width: 40%;
+  margin-top: 150px;
+  width: 50%;
   background-color:rgba(255, 255, 255, 0.2);
-  padding: 40px 20px;
+  padding: 30px 20px;
   border-radius: 25px;
   height: 75px;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 input{
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   padding:5px;
   border: 0px;
 }
@@ -74,4 +83,45 @@ input{
 .inputText{
   width: 50%;
   height: 30px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  text-align:center;
+}
+
+input[type="email"]
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+input[type="submit"]
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  color: white;
+  height: 40px;
+  width: 75px;
+  background-color: #00B5E0;
+}
+
+@media (max-width: 375px) {
+  .email {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .col{
+    width: 90%;
+    float: left;
+    font-size: 12px;
+    padding: 5%;
+    text-align: center;
+  }
+
+  .email {
+    width: 350px;
+  }
 }
